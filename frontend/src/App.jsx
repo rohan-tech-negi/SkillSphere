@@ -1,8 +1,40 @@
-import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import {Toaster} from "react-hot-toast"
+import LandingPage from "./pages/LandingPage/LandingPage";
+import SignUp from "./pages/Auth/SignUp";
+import Login from "./pages/Auth/Login";
 
 const App = () => {
   return (
-    <div className=''>App</div>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage></LandingPage>}></Route>
+          <Route path="/signup" element={<SignUp></SignUp>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+
+
+          {/* catch all routes */}
+          
+
+        </Routes>
+
+      </Router>
+      <Toaster
+        toastOptions={{
+          className:"",
+          style:{
+            fontSize: "13px"
+          }
+        }}
+      ></Toaster>
+
+    </div>
   )
 }
 
