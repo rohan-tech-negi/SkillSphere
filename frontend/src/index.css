@@ -3,3 +3,20 @@
 
 @import "tailwindcss";
 
+
+@theme{
+    --font-display: "Urbanist", sans-serif;
+    --breakpoint-3xl: 1920px;
+    --color-primary: #00A7F3
+}
+
+@layer base{
+    html{
+        font-family: var(--font-display);
+    }
+
+    body{
+        background-color: aliceblue;
+        overflow-x: hidden;
+    }
+}
