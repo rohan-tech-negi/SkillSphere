@@ -12,12 +12,13 @@ import JobSeekerDashboard from "./pages/JobSeeker/JobSeekerDashboard";
 import JobDetails from "./pages/JobSeeker/JobDetails";
 import SavedJobs from "./pages/JobSeeker/SavedJobs";
 import UserProfile from "./pages/JobSeeker/UserProfile";
-import ProtectedRoutes from "./routes/ProtectedRoutes";
+// import ProtectedRoutes from "./routes/ProtectedRoutes";
 import EmployerDashboard from "./pages/Employer/EmployerDashboard";
 import JobPostingForm from "./pages/Employer/JobPostingForm";
 import ManageJobs from "./pages/Employer/Manage.Jobs";
 import ApplicationViewer from "./pages/Employer/ApplicationViewer";
 import EmployerProfilePage from "./pages/Employer/EmployerProfilePage";
+import ProtectedRoute from "./routes/ProtectedRoutes";
 
 
 const App = () => {
@@ -35,7 +36,7 @@ const App = () => {
           <Route path="/profile" element={<UserProfile></UserProfile>}></Route>
 
           {/* protected routes */}
-          <Route element={<ProtectedRoutes></ProtectedRoutes>} requiredRole="employer">
+          <Route element={<ProtectedRoute></ProtectedRoute>} requiredRole="employer">
             <Route path="/employer-dashboard" element={<EmployerDashboard></EmployerDashboard>}></Route>
             <Route path="/post-job" element={<JobPostingForm></JobPostingForm>}></Route>
             <Route path="/manage-jobs" element={<ManageJobs></ManageJobs>}></Route>
