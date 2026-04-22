@@ -18,6 +18,11 @@ const App = () => {
           <Route path="/signup" element={<SignUp></SignUp>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
 
+          <Route path="/find-jobs" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
+          <Route path="/job/:jobId" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
+          <Route path="/saved-jobs" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
+          <Route path="/profile" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
+
 
           {/* catch all routes */}
           <Route path="*" element={<Navigate to="/" replace></Navigate>}></Route>
