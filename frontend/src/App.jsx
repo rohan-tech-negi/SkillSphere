@@ -19,9 +19,11 @@ const App = () => {
           <Route path="/login" element={<Login></Login>}></Route>
 
           <Route path="/find-jobs" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
-          <Route path="/job/:jobId" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
-          <Route path="/saved-jobs" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
-          <Route path="/profile" element={<JobSeekerDashboard></JobSeekerDashboard>}></Route>
+          <Route path="/job/:jobId" element={<JobDetails></JobDetails>}></Route>
+          <Route path="/saved-jobs" element={<SavedJobs></SavedJobs>}></Route>
+          <Route path="/profile" element={<UserProfile></UserProfile>}></Route>
+
+          {/* protected routes */}
 
 
           {/* catch all routes */}
